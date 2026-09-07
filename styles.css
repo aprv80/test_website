@@ -1026,3 +1026,45 @@ a.my-link {
 a.my-link:hover {
             text-decoration: underline;
         }
+
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.industry-card,
+.service-focus {
+  background: #fff;
+  border: 1px solid rgba(15, 35, 64, 0.08);
+  border-radius: 1rem;
+  padding: 1.4rem;
+  box-shadow: 0 10px 30px rgba(15, 35, 64, 0.05);
+}
+
+.industry-card h3,
+.card h2,
+.service-focus h2 {
+  margin-top: 0;
+  color: var(--navy);
+}
+
+.section-link {
+  margin-top: 1.5rem;
+}
+
+.service-focus {
+  margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+  .industry-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 580px) {
+  .industry-grid {
+    grid-template-columns: 1fr;
+  }
+}
